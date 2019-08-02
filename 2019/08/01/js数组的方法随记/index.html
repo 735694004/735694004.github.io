@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="小宇宙">
 <meta property="og:description" content="find 和 filter 的区别 find 123var arr=[4,5,1,6]arr.find(item=&amp;gt;item&amp;gt;4) //5find()接收的参数为一个函数，返回值 是第一个满足条件的元素  是一个元素  filter 123 var arr=[4,5,1,6]arr.filter(item=&amp;gt;item&amp;gt;4) // [5, 6]filter()接收的参数为一个">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-01T07:31:49.051Z">
+<meta property="og:updated_time" content="2019-08-02T12:23:26.855Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js数组的方法随记">
 <meta name="twitter:description" content="find 和 filter 的区别 find 123var arr=[4,5,1,6]arr.find(item=&amp;gt;item&amp;gt;4) //5find()接收的参数为一个函数，返回值 是第一个满足条件的元素  是一个元素  filter 123 var arr=[4,5,1,6]arr.filter(item=&amp;gt;item&amp;gt;4) // [5, 6]filter()接收的参数为一个">
@@ -271,11 +271,21 @@
                 
               
 
-              <time title="创建时间：2019-08-01 15:13:45 / 修改时间：15:31:49" itemprop="dateCreated datePublished" datetime="2019-08-01T15:13:45+08:00">2019-08-01</time>
+              <time title="创建时间：2019-08-01 15:13:45" itemprop="dateCreated datePublished" datetime="2019-08-01T15:13:45+08:00">2019-08-01</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-02 20:23:26" itemprop="dateModified" datetime="2019-08-02T20:23:26+08:00">2019-08-02</time>
+              </span>
             
           
 
@@ -295,8 +305,29 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr=[<span class="number">4</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">6</span>]</span><br><span class="line">arr.find(<span class="function"><span class="params">item</span>=&gt;</span>item&gt;<span class="number">4</span>) <span class="comment">//5</span></span><br><span class="line">find()接收的参数为一个函数，返回值 是第一个满足条件的元素  是一个元素</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>filter</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">var</span> arr=[<span class="number">4</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">6</span>]</span><br><span class="line">arr.filter(<span class="function"><span class="params">item</span>=&gt;</span>item&gt;<span class="number">4</span>) <span class="comment">// [5, 6]</span></span><br><span class="line">filter()接收的参数为一个函数，返回值 是所有满足条件的元素组成的新数组</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">var</span> arr=[<span class="number">4</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">6</span>]</span><br><span class="line">arr.filter(<span class="function"><span class="params">item</span>=&gt;</span>item&gt;<span class="number">4</span>) <span class="comment">// [5, 6]</span></span><br><span class="line">filter()接收的参数为一个函数，返回值 是所有满足条件的元素组成的新数组</span><br></pre></td></tr></table></figure>
+
+</li>
 </ul>
+<p>如何识别一个数组 w3cschool里面提供的三中方式</p>
+<ul>
+<li><p>ECMAScript 5 定义了新方法 Array.isArray()  </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log( <span class="built_in">Array</span>.isArray(arr))<span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
+<p>但是  老版本浏览器不支持  IE除了Edge都不支持</p>
+</li>
+<li><p>用 instanceof  假如对象由给定的构造器创建   则instanceof 运算符返回的是true</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(arr <span class="keyword">instanceof</span> <span class="built_in">Array</span>)<span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
+<p>js中的构造器<br>可以new 的就是构造器   Function Array Object Date 这些是js提供的封装对象  也可以自己穿创建的类<br>instanceof   会沿着原型链一直往上查找  知道找到Object为止<br>Number String  Boolean null undefined  这几个是不能用这个方法的</p>
+<ul>
+<li>自己封装函数<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isArray</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x.constructor.toString().indexOf(<span class="string">"Array"</span>) &gt; <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<p>constructor构造函数 null和 undefined没有构造函数</p>
 
     </div>
 
