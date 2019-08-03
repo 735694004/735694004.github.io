@@ -268,7 +268,7 @@
                 
               
 
-              <time title="创建时间：2019-08-03 09:15:53 / 修改时间：10:27:06" itemprop="dateCreated datePublished" datetime="2019-08-03T09:15:53+08:00">2019-08-03</time>
+              <time title="创建时间：2019-08-03 09:15:53 / 修改时间：11:13:13" itemprop="dateCreated datePublished" datetime="2019-08-03T09:15:53+08:00">2019-08-03</time>
             </span>
           
             
@@ -332,9 +332,24 @@
 </ul>
 </li>
 <li>? 表示?前边的单个字符出现0-1次</li>
+<li>^ 以xx的字符开头</li>
+<li>$ 以xx的字符结尾</li>
 <li>[] 表示字符可以出现的范围<br>[0-9a-zA-Z_]数字字母下划线 就一个字符</li>
 <li>\w 等价于数字字母下划线  就是[0-9a-zA-Z_]</li>
 <li>\W 字母下划线[a-zA-Z_]</li>
+<li>\d 代表数字 等价于[0-9]</li>
+<li>\D 代表非数字</li>
+<li>{} 对出现的次数进行限定<ul>
+<li>{3} 3次</li>
+<li>{3,5} 3到5次</li>
+<li>{3,} 3次以上  至少3次</li>
+</ul>
+</li>
+<li>\s 匹配空格</li>
+<li>\b 可以匹配是否到了边界</li>
+<li>| 或者</li>
+<li>() 代表分组</li>
+<li>REgExp.$1 取出第一个分组的内容  str.replace(reg,”$1”)</li>
 </ul>
 
           
