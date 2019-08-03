@@ -56,18 +56,19 @@
   };
 </script>
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="1.概念正则表达式是用来验证或匹配 某个字符串如 找子串 替换字符  表单验证 是由普通字符及特殊字符（元字符）组成的对字符串进行过滤的逻辑公式  2.正则表达式的创建 字面量 1let reg=/abc/  构造函数 1let reg=new RegExp(&quot;sdf&quot;,&quot;i&quot;)//i表示不区分大小写 i用来修饰正则表达式    3.test方法1reg.test(str) //返回布尔值   检">
+<meta name="keywords" content="js基础">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2017/10/17/hello-world/index.html">
+<meta property="og:title" content="正则表达式">
+<meta property="og:url" content="http://yoursite.com/2019/08/03/正则表达式/index.html">
 <meta property="og:site_name" content="小宇宙">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="1.概念正则表达式是用来验证或匹配 某个字符串如 找子串 替换字符  表单验证 是由普通字符及特殊字符（元字符）组成的对字符串进行过滤的逻辑公式  2.正则表达式的创建 字面量 1let reg=/abc/  构造函数 1let reg=new RegExp(&quot;sdf&quot;,&quot;i&quot;)//i表示不区分大小写 i用来修饰正则表达式    3.test方法1reg.test(str) //返回布尔值   检">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-30T13:52:42.013Z">
+<meta property="og:updated_time" content="2019-08-03T02:27:06.318Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-  <link rel="canonical" href="http://yoursite.com/2017/10/17/hello-world/">
+<meta name="twitter:title" content="正则表达式">
+<meta name="twitter:description" content="1.概念正则表达式是用来验证或匹配 某个字符串如 找子串 替换字符  表单验证 是由普通字符及特殊字符（元字符）组成的对字符串进行过滤的逻辑公式  2.正则表达式的创建 字面量 1let reg=/abc/  构造函数 1let reg=new RegExp(&quot;sdf&quot;,&quot;i&quot;)//i表示不区分大小写 i用来修饰正则表达式    3.test方法1reg.test(str) //返回布尔值   检">
+  <link rel="canonical" href="http://yoursite.com/2019/08/03/正则表达式/">
 
 
 <script id="page.configurations">
@@ -76,7 +77,7 @@
   };
 </script>
 
-  <title>Hello World | 小宇宙</title>
+  <title>正则表达式 | 小宇宙</title>
   
 
 
@@ -237,7 +238,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/17/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/03/正则表达式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Reina Chen">
@@ -251,7 +252,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">Hello World
+          <h1 class="post-title" itemprop="name headline">正则表达式
 
               
             
@@ -271,21 +272,11 @@
                 
               
 
-              <time title="创建时间：2017-10-17 20:12:15" itemprop="dateCreated datePublished" datetime="2017-10-17T20:12:15+08:00">2017-10-17</time>
+              <time title="创建时间：2019-08-03 09:15:53 / 修改时间：10:27:06" itemprop="dateCreated datePublished" datetime="2019-08-03T09:15:53+08:00">2019-08-03</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-07-30 21:52:42" itemprop="dateModified" datetime="2019-07-30T21:52:42+08:00">2019-07-30</time>
-              </span>
             
           
 
@@ -300,19 +291,54 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <h2 id="1-概念"><a href="#1-概念" class="headerlink" title="1.概念"></a>1.概念</h2><p>正则表达式是用来验证或匹配 某个字符串<br>如 找子串 替换字符  表单验证<br> 是由普通字符及特殊字符（元字符）组成的对字符串进行过滤的逻辑公式 </p>
+<h2 id="2-正则表达式的创建"><a href="#2-正则表达式的创建" class="headerlink" title="2.正则表达式的创建"></a>2.正则表达式的创建</h2><ul>
+<li><p>字面量</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> reg=<span class="regexp">/abc/</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>构造函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> reg=<span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"sdf"</span>,<span class="string">"i"</span>)<span class="comment">//i表示不区分大小写 i用来修饰正则表达式</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="3-test方法"><a href="#3-test方法" class="headerlink" title="3.test方法"></a>3.test方法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg.test(str) <span class="comment">//返回布尔值   检测str中是否包含 reg所代表的子串</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h2 id="4-exec方法"><a href="#4-exec方法" class="headerlink" title="4.exec方法"></a>4.exec方法</h2><p>该方法返回的数据是一个伪数组，将匹配成功的内容返回  如果没有返回null</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg.exec(str) <span class="comment">//返回类数组中的index表示匹配的子串在字符串中的位置</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h2 id="5-lastIndex方法"><a href="#5-lastIndex方法" class="headerlink" title="5.lastIndex方法"></a>5.lastIndex方法</h2><p>下次开始匹配的位置 可读可写</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reg.lastIndex=<span class="number">1</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h2 id="6-与字符串的方法连用"><a href="#6-与字符串的方法连用" class="headerlink" title="6.与字符串的方法连用"></a>6.与字符串的方法连用</h2><ul>
+<li><p>敏感词过滤 str.replace</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> reg=<span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"tmd"</span>, <span class="string">"ig"</span>)</span><br><span class="line">str.replace(reg,<span class="string">"*"</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>str.match</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> reg=<span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"tmd"</span>, <span class="string">"ig"</span>)</span><br><span class="line">str.match(reg)<span class="comment">//返回一个匹配结果的数组</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>str.search</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> reg=<span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"tmd"</span>, <span class="string">"ig"</span>)</span><br><span class="line">str.search(reg)<span class="comment">//返回str中满足reg的第一个字串的位置</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>str.split</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.split(reg)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="7-云字符"><a href="#7-云字符" class="headerlink" title="7.云字符"></a>7.云字符</h2><ul>
+<li>. 代表任意单个字符 换行除外</li>
+<li><ul>
+<li>代表*前边的单个字符出现0-n次</li>
+</ul>
+</li>
+<li><ul>
+<li>代表*前边的单个字符出现1-n次</li>
+</ul>
+</li>
+<li>? 表示?前边的单个字符出现0-1次</li>
+<li>[] 表示字符可以出现的范围<br>[0-9a-zA-Z_]数字字母下划线 就一个字符</li>
+<li>\w 等价于数字字母下划线  就是[0-9a-zA-Z_]</li>
+<li>\W 字母下划线[a-zA-Z_]</li>
+</ul>
 
     </div>
 
@@ -321,10 +347,16 @@
     
 
     <footer class="post-footer">
+          
+        
+        <div class="post-tags">
+            <a href="/tags/js基础/" rel="tag"># js基础</a>
+          
+        </div>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
-              <a href="/2017/07/12/git常用命令/" rel="next" title="git常用命令">
-                <i class="fa fa-chevron-left"></i> git常用命令
+              <a href="/2019/08/02/js扩展运算符/" rel="next" title="js扩展运算符">
+                <i class="fa fa-chevron-left"></i> js扩展运算符
               </a>
             
           </div>
@@ -332,10 +364,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-              <a href="/2017/10/30/viewport/" rel="prev" title="viewport">
-                viewport <i class="fa fa-chevron-right"></i>
-              </a>
-            
           </div>
         </div>
     </footer>
@@ -477,7 +505,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-概念"><span class="nav-text">1.概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-正则表达式的创建"><span class="nav-text">2.正则表达式的创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-test方法"><span class="nav-text">3.test方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-exec方法"><span class="nav-text">4.exec方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-lastIndex方法"><span class="nav-text">5.lastIndex方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-与字符串的方法连用"><span class="nav-text">6.与字符串的方法连用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-云字符"><span class="nav-text">7.云字符</span></a></li></ol></div>
             
 
           </div>
