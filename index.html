@@ -408,11 +408,21 @@
                 
               
 
-              <time title="创建时间：2019-08-02 16:18:15 / 修改时间：21:04:25" itemprop="dateCreated datePublished" datetime="2019-08-02T16:18:15+08:00">2019-08-02</time>
+              <time title="创建时间：2019-08-02 16:18:15" itemprop="dateCreated datePublished" datetime="2019-08-02T16:18:15+08:00">2019-08-02</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-06 15:02:36" itemprop="dateModified" datetime="2019-08-06T15:02:36+08:00">2019-08-06</time>
+              </span>
             
           
 
@@ -452,11 +462,16 @@
 <li><p>数组<br>结果得到的是数组</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [a,...rest] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"><span class="built_in">console</span>.log(a);<span class="comment">// 1</span></span><br><span class="line"><span class="built_in">console</span>.log(rest);<span class="comment">// [2,3,4]</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>对象<br>赋值的时候会按照遍 历对象的方式去遍历两边的数据 找对应属性名的属性值进行赋值<br>最后得到的是对象</p>
+<li><p>对象<br>赋值的时候会按照遍历对象的方式去遍历两边的数据 找对应属性名的属性值进行赋值（右边赋值给左边）<br>最后得到的是对象</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">  a:<span class="number">1</span>,</span><br><span class="line">  b:<span class="number">2</span>,</span><br><span class="line">  c:<span class="number">3</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> &#123;a,...demo&#125; = obj;</span><br><span class="line"><span class="built_in">console</span>.log(a);<span class="comment">// 1</span></span><br><span class="line"><span class="built_in">console</span>.log(demo);<span class="comment">// &#123;b:2,c:3&#125;</span></span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">  a:<span class="number">1</span>,</span><br><span class="line">  b:<span class="number">2</span>,</span><br><span class="line">  c:<span class="number">3</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> obj1=&#123;<span class="attr">a</span>:<span class="number">4</span>,</span><br><span class="line">  b:<span class="number">5</span>,</span><br><span class="line">  c:<span class="number">3</span>&#125;</span><br><span class="line"><span class="keyword">let</span> obj2=&#123;...obj,...obj1&#125;</span><br><span class="line"><span class="built_in">console</span>.log(obj2);<span class="comment">// &#123;a:4,b:5,c:3&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="6、vuex的mapState"><a href="#6、vuex的mapState" class="headerlink" title="6、vuex的mapState"></a>6、vuex的mapState</h2><p>值的映射</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> ...mapState([<span class="string">"sname"</span>]),</span><br><span class="line">...mapState(&#123;</span><br><span class="line">		a:<span class="string">"sname"</span></span><br><span class="line">	&#125;)</span><br></pre></td></tr></table></figure>
+
 
           
         
@@ -761,7 +776,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-02 16:02:16" itemprop="dateModified" datetime="2019-08-02T16:02:16+08:00">2019-08-02</time>
+                <time title="修改时间：2019-08-05 21:11:40" itemprop="dateModified" datetime="2019-08-05T21:11:40+08:00">2019-08-05</time>
               </span>
             
           
@@ -827,6 +842,29 @@
 
 
 <h2 id="redux"><a href="#redux" class="headerlink" title="redux"></a>redux</h2><p> 单项数据流<br> 数据是单向流动的<br> 视图通过 dispatch<br>   redux 是一个全局状态管理差价</p>
+<h2 id="无状态组件"><a href="#无状态组件" class="headerlink" title="无状态组件"></a>无状态组件</h2><p> 无状态组件是说没有状态state<br> 通过函数来定义的组件，通过属性来接收参数<br> 如果在该组件中无需改变状态数据  只需要展示  则可以定义成无状态组件<br> 这样会提高性能  中间也不用担心this指向<br> <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">"react"</span></span><br><span class="line"><span class="keyword">const</span>  Nostate=<span class="function">(<span class="params">props</span>)=&gt;</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(props)</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;p&gt;无状态组件aa&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">        &lt;/</span>div&gt;</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span>  <span class="keyword">default</span>  Nostate;</span><br></pre></td></tr></table></figure></p>
+<p> 当然 如果非要用的话也有方法<br> <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;useState,useEffect&#125; <span class="keyword">from</span> <span class="string">"react"</span></span><br><span class="line"><span class="keyword">let</span> [aaa,setAaa]=useState(<span class="string">"4"</span>)<span class="comment">//定义一个状态aaa 修改状态的唯一方setAaa 初识值4</span></span><br><span class="line">setAAA(<span class="string">"sd"</span>)<span class="comment">//修改状态aaa为sd</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="受控组件和非受控组件"><a href="#受控组件和非受控组件" class="headerlink" title="受控组件和非受控组件"></a>受控组件和非受控组件</h2><p>受控与非受控指的是状态是否受控  在页面中状态改变不了<br>通过事件绑定来改变状态  变成受控组件<br> <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><p> 三个阶段 mounted update  unmont</p>
+<h3 id="mounted-挂载阶段-初始化阶段"><a href="#mounted-挂载阶段-初始化阶段" class="headerlink" title="mounted 挂载阶段  初始化阶段"></a>mounted 挂载阶段  初始化阶段</h3> <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">componentWillMount() <span class="comment">//不能获得ref dom 节点  此时组件还没加载完成</span></span><br><span class="line">render()</span><br><span class="line">componentDidMount()  <span class="comment">//可以获取dom节点 官方推荐 兼容下一代的版本  ajax加载数据的 函数</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="update-更新阶段"><a href="#update-更新阶段" class="headerlink" title="update 更新阶段"></a>update 更新阶段</h3><p>  触发条件 自身状态修改  父组件修改了子组件的属性<br> <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">componentWillRecevieProps()<span class="comment">//组件即将接收新参数</span></span><br><span class="line">shouldComponentUpdate()<span class="comment">//组件是否更新  影响整个项目的性能 决定视图的更新</span></span><br><span class="line">componentWillUpdate() <span class="comment">// </span></span><br><span class="line">render()</span><br><span class="line">componentDidUpdate()  <span class="comment">//</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="unmount-卸载阶段"><a href="#unmount-卸载阶段" class="headerlink" title="unmount 卸载阶段"></a>unmount 卸载阶段</h3> <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> componentWillUnmont() <span class="comment">//</span></span><br><span class="line">  componentDidUnmont() <span class="comment">//</span></span><br><span class="line">ReactDOM.unmountComponentAtNode(<span class="built_in">document</span>.getElementByid(<span class="string">"id名"</span>))</span><br></pre></td></tr></table></figure>
+
+<h2 id="虚拟DOM与diff算法"><a href="#虚拟DOM与diff算法" class="headerlink" title="虚拟DOM与diff算法"></a>虚拟DOM与diff算法</h2><p> Web界面由DOM树来构成，当其中某一部分发生变化时，其实就是对应的某个DOM节点发生了变化<br> 在React中，构建UI界面的思路是由当前状态决定界面，前后两个状态就对应两套界面，然后由React来对比两个界面的区别<br> 这就需要对DOM树进行Diff算法分析</p>
+<h2 id="flux"><a href="#flux" class="headerlink" title="flux"></a>flux</h2><p>view<br>视图层  展示页面<br>action<br>动作层 页面的点击事件等  有动作就有可能要改变数据  视图层发出来的消息  调用dispatch方法  发送数据<br>dispatcher<br>派发器 事件调度中心  最重要的组成部分  视图层发送的action 是要给到dispatcher  然后由dispatcher来进行分类<br>store<br>数据层 用来存放数据、状态 一旦发生改变就提醒<br> 流程<br> 用户访问界面 访问view  发出action  给diapacther<br> dispatcher根据action的指令  让store作相应的更新 发出change事件页面更新</p>
+<p>dispatcher是事件调度中心，flux模型的中心枢纽<br>管理着Flux应用中的所有数据流，他本质上是store的回调注册<br>每个store注册他自己并提供一个回调函数，当dispatcher响应action时<br>通过注册的回调函数，将action提供的数据负载发送给应用中的所有store</p>
+<h2 id="Redux"><a href="#Redux" class="headerlink" title="Redux"></a>Redux</h2><p> 1.使用场景：多交互、多数据源（OA系统电商网站）<br> 2.应用数据流程框架、可预测状态的容器，<br> 3.redux最主要的作用是用做状态的管理，简言之，Redux用一个单独的常量状态树（对象）保存一整个应用的状态，这个对象不能被直接改变，当一些数据变化了，一个新的对象就会被创建（使用actions和reducers）<br> 4.主要是为了解决组件之间的状态共享问题，原理是集中式管理<br> 5.redux的流程：<br> View调用store.dispatch发起action—&gt;store<br> store接收action(将action传入reducer函数，reduce函数返回一个新的state)-&gt;通知store.subscribe订阅的重新渲染函数<br> View发出action stoer接收action store中的reducer函数处理action 返回一个新的状态 通过store中的subscribe订阅监听来重新渲染</p>
+<h3 id="Redux和Flux的区别"><a href="#Redux和Flux的区别" class="headerlink" title="Redux和Flux的区别"></a>Redux和Flux的区别</h3><p> 1.flux可以有多个store而Redux只能有一个store，易扩展 混乱矛盾<br> 2.Redux 没有Dispatch，redux将store和dispatch合并，结构更加简单清晰  可以直接使用API</p>
+<h3 id="Redux-的四部分-Action-Store-Reducer"><a href="#Redux-的四部分-Action-Store-Reducer" class="headerlink" title="Redux 的四部分 Action Store Reducer"></a>Redux 的四部分 Action Store Reducer</h3><p> umi是阿里的一个企业级的react框架</p>
+<h2 id="react-redux"><a href="#react-redux" class="headerlink" title="react-redux"></a>react-redux</h2><p> 1.适合无状态组件<br> 2.UI组件 容器组件<br> 3.UI组件与容器组件之间的关系<br> React-redux 提供的connect方法  用于从UI组件生成容器组件  connect就是将这两种组件连接起来<br> <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;connect&#125; <span class="keyword">from</span> <span class="string">"react-redux"</span></span><br><span class="line"><span class="keyword">const</span> A=connect(<span class="comment">//A为用B生成的容器组件</span></span><br><span class="line">mapStateToProps,</span><br><span class="line">mapDIspatchToProps</span><br><span class="line">)(B)<span class="comment">//B为UI组件</span></span><br></pre></td></tr></table></figure></p>
+<p> 主要是要写UI组件，<br> 还有声明 定义容器组件所需要的状态的修改、 action动作、跟redux相关的api<br> 定义完之后要通过connect方法连接UI组件    容器组件是最后要生成的</p>
+<ol start="4">
+<li><p>容器组件的方法<br>mapStateToProps建立一个从外部的state对象到UI组件的props对象的映射关系<br>mapStateToProps会订阅Store,每当state更新的时候就会自动执行，重新计算UI组件的参数<br>从而触发UI组件的重新渲染<br>UI组件中没有state，需要 mapStateToProps从外部的reducer处理之后返回的新的state，然后映射到UI组件中的props</p>
+<p>mapDispatchToProps 用来建立UI组件的参数到store.dispatch方法的映射，<br>它定义了那些用户的操作应该当做Action，传给store<br>它可以是一个函数，也可以是一个对象，对象较多</p>
+</li>
+</ol>
+<p><provider store="{store}"></provider><br>可以让容器组件拿到state</p>
 
           
         
@@ -903,7 +941,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-01 08:51:02" itemprop="dateModified" datetime="2019-08-01T08:51:02+08:00">2019-08-01</time>
+                <time title="修改时间：2019-08-05 14:18:08" itemprop="dateModified" datetime="2019-08-05T14:18:08+08:00">2019-08-05</time>
               </span>
             
           
@@ -922,7 +960,7 @@
           
             <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">React webpack手动配置为例</span><br></pre></td></tr></table></figure>
 
-<h1 id="一、全局安装webpack"><a href="#一、全局安装webpack" class="headerlink" title="一、全局安装webpack"></a>一、全局安装webpack</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack -g</span><br></pre></td></tr></table></figure>
+<h1 id="一、安装webpack"><a href="#一、安装webpack" class="headerlink" title="一、安装webpack"></a>一、安装webpack</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack webpack-cli webpack-dev-server --save-dev</span><br></pre></td></tr></table></figure>
 
 <h1 id="二、需要安装的本地依赖"><a href="#二、需要安装的本地依赖" class="headerlink" title="二、需要安装的本地依赖"></a>二、需要安装的本地依赖</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install react  react-dom --save-dev</span><br></pre></td></tr></table></figure>
 
@@ -937,6 +975,7 @@
 <h2 id="删除完成后，再重新使用淘宝的镜像安装"><a href="#删除完成后，再重新使用淘宝的镜像安装" class="headerlink" title="删除完成后，再重新使用淘宝的镜像安装"></a>删除完成后，再重新使用淘宝的镜像安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i node-sass --sass_binary_site=https://npm.taobao.org/mirrors/node-sass/</span><br></pre></td></tr></table></figure>
 
 <p>在VUE中使用sass 安装上 以上两个 然后再组件中的style标签上添加属性 lang=”scss”</p>
+<p>注： 需要安装的加载器有 sass-loader css-loader style-loader url-loader file-loader </p>
 
           
         

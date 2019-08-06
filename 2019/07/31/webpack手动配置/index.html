@@ -56,17 +56,17 @@
   };
 </script>
 
-  <meta name="description" content="前言1React webpack手动配置为例  一、全局安装webpack1npm install webpack -g  二、需要安装的本地依赖1npm install react  react-dom --save-dev  三、本地安装babel1npm install babel-loader@7 babel-core babel-preset-es2015 babel-preset-re">
+  <meta name="description" content="前言1React webpack手动配置为例  一、安装webpack1npm install webpack webpack-cli webpack-dev-server --save-dev  二、需要安装的本地依赖1npm install react  react-dom --save-dev  三、本地安装babel1npm install babel-loader@7 babel-cor">
 <meta property="og:type" content="article">
 <meta property="og:title" content="webpack手动配置">
 <meta property="og:url" content="http://yoursite.com/2019/07/31/webpack手动配置/index.html">
 <meta property="og:site_name" content="小宇宙">
-<meta property="og:description" content="前言1React webpack手动配置为例  一、全局安装webpack1npm install webpack -g  二、需要安装的本地依赖1npm install react  react-dom --save-dev  三、本地安装babel1npm install babel-loader@7 babel-core babel-preset-es2015 babel-preset-re">
+<meta property="og:description" content="前言1React webpack手动配置为例  一、安装webpack1npm install webpack webpack-cli webpack-dev-server --save-dev  二、需要安装的本地依赖1npm install react  react-dom --save-dev  三、本地安装babel1npm install babel-loader@7 babel-cor">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-01T00:51:02.231Z">
+<meta property="og:updated_time" content="2019-08-05T06:18:08.734Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack手动配置">
-<meta name="twitter:description" content="前言1React webpack手动配置为例  一、全局安装webpack1npm install webpack -g  二、需要安装的本地依赖1npm install react  react-dom --save-dev  三、本地安装babel1npm install babel-loader@7 babel-core babel-preset-es2015 babel-preset-re">
+<meta name="twitter:description" content="前言1React webpack手动配置为例  一、安装webpack1npm install webpack webpack-cli webpack-dev-server --save-dev  二、需要安装的本地依赖1npm install react  react-dom --save-dev  三、本地安装babel1npm install babel-loader@7 babel-cor">
   <link rel="canonical" href="http://yoursite.com/2019/07/31/webpack手动配置/">
 
 
@@ -284,7 +284,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-01 08:51:02" itemprop="dateModified" datetime="2019-08-01T08:51:02+08:00">2019-08-01</time>
+                <time title="修改时间：2019-08-05 14:18:08" itemprop="dateModified" datetime="2019-08-05T14:18:08+08:00">2019-08-05</time>
               </span>
             
           
@@ -302,7 +302,7 @@
       
         <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">React webpack手动配置为例</span><br></pre></td></tr></table></figure>
 
-<h1 id="一、全局安装webpack"><a href="#一、全局安装webpack" class="headerlink" title="一、全局安装webpack"></a>一、全局安装webpack</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack -g</span><br></pre></td></tr></table></figure>
+<h1 id="一、安装webpack"><a href="#一、安装webpack" class="headerlink" title="一、安装webpack"></a>一、安装webpack</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack webpack-cli webpack-dev-server --save-dev</span><br></pre></td></tr></table></figure>
 
 <h1 id="二、需要安装的本地依赖"><a href="#二、需要安装的本地依赖" class="headerlink" title="二、需要安装的本地依赖"></a>二、需要安装的本地依赖</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install react  react-dom --save-dev</span><br></pre></td></tr></table></figure>
 
@@ -317,6 +317,7 @@
 <h2 id="删除完成后，再重新使用淘宝的镜像安装"><a href="#删除完成后，再重新使用淘宝的镜像安装" class="headerlink" title="删除完成后，再重新使用淘宝的镜像安装"></a>删除完成后，再重新使用淘宝的镜像安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i node-sass --sass_binary_site=https://npm.taobao.org/mirrors/node-sass/</span><br></pre></td></tr></table></figure>
 
 <p>在VUE中使用sass 安装上 以上两个 然后再组件中的style标签上添加属性 lang=”scss”</p>
+<p>注： 需要安装的加载器有 sass-loader css-loader style-loader url-loader file-loader </p>
 
     </div>
 
@@ -481,7 +482,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一、全局安装webpack"><span class="nav-text">一、全局安装webpack</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、需要安装的本地依赖"><span class="nav-text">二、需要安装的本地依赖</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、本地安装babel"><span class="nav-text">三、本地安装babel</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置webpack-config-js"><span class="nav-text">配置webpack.config.js</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、可能需要的loader加载器"><span class="nav-text">四、可能需要的loader加载器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、node-sass的安装"><span class="nav-text">五、node-sass的安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2018年4月-node-js10更新后node-sass不兼容问题过程以及解决"><span class="nav-text">2018年4月 node js10更新后node-sass不兼容问题过程以及解决</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除完成后，再重新使用淘宝的镜像安装"><span class="nav-text">删除完成后，再重新使用淘宝的镜像安装</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一、安装webpack"><span class="nav-text">一、安装webpack</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、需要安装的本地依赖"><span class="nav-text">二、需要安装的本地依赖</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、本地安装babel"><span class="nav-text">三、本地安装babel</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置webpack-config-js"><span class="nav-text">配置webpack.config.js</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、可能需要的loader加载器"><span class="nav-text">四、可能需要的loader加载器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、node-sass的安装"><span class="nav-text">五、node-sass的安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2018年4月-node-js10更新后node-sass不兼容问题过程以及解决"><span class="nav-text">2018年4月 node js10更新后node-sass不兼容问题过程以及解决</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除完成后，再重新使用淘宝的镜像安装"><span class="nav-text">删除完成后，再重新使用淘宝的镜像安装</span></a></li></ol></li></ol></div>
             
 
           </div>
