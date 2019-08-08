@@ -421,7 +421,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-06 15:02:36" itemprop="dateModified" datetime="2019-08-06T15:02:36+08:00">2019-08-06</time>
+                <time title="修改时间：2019-08-08 12:00:14" itemprop="dateModified" datetime="2019-08-08T12:00:14+08:00">2019-08-08</time>
               </span>
             
           
@@ -457,19 +457,19 @@
 <h2 id="4、与扩展相反-他还可以收缩"><a href="#4、与扩展相反-他还可以收缩" class="headerlink" title="4、与扩展相反  他还可以收缩"></a>4、与扩展相反  他还可以收缩</h2><p>当函数的参数不确定有多少个的时候可以用这个扩展<br>…arg只能放在最后一个 且arg只一个真数组<br>ES6 中弃用了arguments 它是个伪数组</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> foo= <span class="function">(<span class="params">...arg</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(arg); </span><br><span class="line">&#125;</span><br><span class="line">foo(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);<span class="comment">//[1,2,3]  </span></span><br><span class="line"><span class="keyword">const</span> foo= <span class="function">(<span class="params">a,...arg</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(arg); </span><br><span class="line">&#125;</span><br><span class="line">foo(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);<span class="comment">//[2,3]  a为1</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="5、与结构赋值配合用"><a href="#5、与结构赋值配合用" class="headerlink" title="5、与结构赋值配合用"></a>5、与结构赋值配合用</h2><p>结构赋值  等式两边的结构相同  进行批量赋值</p>
+<h2 id="5、与解构赋值配合用"><a href="#5、与解构赋值配合用" class="headerlink" title="5、与解构赋值配合用"></a>5、与解构赋值配合用</h2><p>结构赋值  等式两边的结构相同  进行批量赋值 它其实就是一种值的映射</p>
 <ul>
-<li><p>数组<br>结果得到的是数组</p>
+<li><p>数组<br>右边数组里都是值，就直接按照顺序赋值给左边，a被赋值成了1，<br>后面剩下的2.3.4就都给了rest，结果得到的是数组 跟左边的结构是一样的</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [a,...rest] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"><span class="built_in">console</span>.log(a);<span class="comment">// 1</span></span><br><span class="line"><span class="built_in">console</span>.log(rest);<span class="comment">// [2,3,4]</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>对象<br>赋值的时候会按照遍历对象的方式去遍历两边的数据 找对应属性名的属性值进行赋值（右边赋值给左边）<br>最后得到的是对象</p>
+<li><p>对象<br>赋值的时候会按照遍历对象的方式去遍历两边的数据 找对应属性名的属性值进行赋值（右边赋值给左边）<br>左边let 后面是一个{a,…demo},这是个对象，里面有个a属性<br>就相当于在右边的obj里面找有没有a,有就赋值给左边，没有就是undefined<br>剩下的b.c都给了dome，得到的dome是个对象 跟左边的结构是一样的</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">  a:<span class="number">1</span>,</span><br><span class="line">  b:<span class="number">2</span>,</span><br><span class="line">  c:<span class="number">3</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> &#123;a,...demo&#125; = obj;</span><br><span class="line"><span class="built_in">console</span>.log(a);<span class="comment">// 1</span></span><br><span class="line"><span class="built_in">console</span>.log(demo);<span class="comment">// &#123;b:2,c:3&#125;</span></span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">  a:<span class="number">1</span>,</span><br><span class="line">  b:<span class="number">2</span>,</span><br><span class="line">  c:<span class="number">3</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> obj1=&#123;<span class="attr">a</span>:<span class="number">4</span>,</span><br><span class="line">  b:<span class="number">5</span>,</span><br><span class="line">  c:<span class="number">3</span>&#125;</span><br><span class="line"><span class="keyword">let</span> obj2=&#123;...obj,...obj1&#125;</span><br><span class="line"><span class="built_in">console</span>.log(obj2);<span class="comment">// &#123;a:4,b:5,c:3&#125;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="6、vuex的mapState"><a href="#6、vuex的mapState" class="headerlink" title="6、vuex的mapState"></a>6、vuex的mapState</h2><p>值的映射</p>
+<h2 id="6、vuex的mapState"><a href="#6、vuex的mapState" class="headerlink" title="6、vuex的mapState"></a>6、vuex的mapState</h2><p>值的映射<br>除了把变量的值全部取出来之外，还可以只取出一部分</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> ...mapState([<span class="string">"sname"</span>]),</span><br><span class="line">...mapState(&#123;</span><br><span class="line">		a:<span class="string">"sname"</span></span><br><span class="line">	&#125;)</span><br></pre></td></tr></table></figure>
 
 
